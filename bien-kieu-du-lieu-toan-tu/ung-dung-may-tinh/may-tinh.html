@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng máy tính</title>
+</head>
+<body>
+<label>
+    <input type="number" id="a">
+</label>
+<label>
+    <input type="number" id="b">
+</label>
+<br>
+<br>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Addition(-)</button>
+<button onclick="nhan()">Addition(*)</button>
+<button onclick="chia()">Addition(/)</button>
+<br>
+<br>
+<div id="ketqua"></div>
+<script>
+    function cong() {
+        let soa = +document.getElementById('a').value;
+        let sob = +document.getElementById('b').value;
+        let c = soa + sob;
+        document.getElementById('ketqua').innerHTML = 'Result Division:  ' + c;
+    }
+
+    function tru() {
+        let soa = document.getElementById('a').value;
+        let sob = document.getElementById('b').value;
+        let c = soa - sob;
+        document.getElementById('ketqua').innerHTML = 'Result Division:  ' + c;
+    }
+
+    function nhan() {
+        let soa = document.getElementById('a').value;
+        let sob = document.getElementById('b').value;
+        let c = soa * sob;
+        document.getElementById('ketqua').innerHTML = 'Result Division:  ' + c;
+    }
+
+    function chia() {
+        let soa = document.getElementById('a').value;
+        let sob = document.getElementById('b').value;
+        let c = soa / sob;
+        document.getElementById('ketqua').innerHTML = 'Result Division:  ' + c;
+    }
+
+</script>
+</body>
+</html>

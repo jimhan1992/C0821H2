@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tạo bảng đơn giản</title>
+    <style>
+        body {
+            padding-top: 20px;
+            padding-left: 200px;
+            padding-right: 200px;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: black;
+        }
+        td,th{
+            border: 2px solid black;
+            font-size: 16px;
+        }
+        .tr1{
+            background-color: white;
+        }
+
+        .td1{
+            width: 5%;
+            text-align: center;
+        }
+        .td2{
+            width: 10%;
+        }
+        .td3{
+            width: 15%;
+        }
+
+        #container{width:100%;}
+        #left{float:left;}
+        #right{float:right;}
+        #center{margin:0 auto;width:100px;}
+        tr:nth-child(1){
+            background-color: #fefb00;
+        }
+        tr:nth-child(2){
+            background-color: #fdb201;
+        }
+
+    </style>
+</head>
+<body>
+<h1>THỜI KHÓA BIỂU</h1>
+<div style="color: blue">
+    <div id="left">
+        <p>
+            Lớp: C0821h2<br>
+            Giáo Viên: Phạm Văn Luân<br>
+            Phòng học: Tại nhà
+        </p>
+    </div>
+    <div id="right">
+        <p>
+            Thời gian học: 8h00 - 17h30<br>
+            Ngày học: Thứ 3, 5, 7
+        </p>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th class="tr1" colspan="3"></th>
+        <th class="td3">Thứ 3</th>
+        <th class="td3">Thứ 5</th>
+        <th class="td3">Thứ 7</th>
+    </tr>
+
+    <tr>
+        <th class="td1">Tuần</th>
+        <th class="td2">Ngày bắt đầu</th>
+        <th class="td2">Ngày kết thúc</th>
+        <th class="td3" colspan="3">Môn Học</th>
+    </tr>
+    <tr>
+        <td class="td1">01</td>
+        <td class="td2">01/09/2009</td>
+        <td class="td2">05/09/2009</td>
+        <td class="td3">CF - T1,L1</td>
+        <td class="td3">CF - T2,L2</td>
+        <td class="td3">CF - T3,L3</td>
+    </tr>
+    <tr>
+        <td class="td1">02</td>
+        <td class="td2">08/09/2009</td>
+        <td class="td2">12/09/2009</td>
+        <td class="td3">CF - T3,L3</td>
+        <td class="td3">CF - Written Test</td>
+        <td class="td3">C - T1,L1</td>
+    </tr>
+    <tr>
+        <td class="td1">03</td>
+        <td class="td2">...</td>
+        <td class="td2">...</td>
+        <td class="td3">...</td>
+        <td class="td3">...</td>
+        <td class="td3">...</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

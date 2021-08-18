@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình VL, HH, SH</title>
+</head>
+<body>
+
+
+<script>
+    let inputvatly;
+    let inputhoahoc;
+    let inputsinhhoc;
+    inputvatly = prompt('Nhập điểm Vật Lý:');
+    inputhoahoc = prompt('Nhập điểm Hóa Học:');
+    inputsinhhoc = prompt('Nhập điểm Sinh Học:');
+    let vatly = parseFloat(inputvatly);
+    let hoahoc = parseFloat(inputhoahoc);
+    let sinhhoc = parseFloat(inputsinhhoc);
+    let T = vatly + hoahoc + sinhhoc;
+    let TB = T / 3;
+    document.write('Tổng : ' + T);
+    document.write('<br>');
+    document.write('Điểm trung bình: ' + TB.toFixed(2));
+
+</script>
+</body>
+</html>
