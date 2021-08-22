@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<p>
+    Phí thuê bao bắt buộc là 25 nghìn. <br>
+    600 đồng cho mỗi phút gọi của 50 phút đầu tiên. <br>
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo. <br>
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+</p>
+<p>Nhập số phút đã gọi:</p>
+<label><input type="number" id="nhap"></label>
+<button onclick="kiem_tra()"> Kiểm tra</button>
+<br>
+<br>
+<div id="result"></div>
+
+<script>
+    function kiem_tra() {
+        let ttoan = document.getElementById('nhap').value;
+        if (ttoan <= 0) {
+            ttoan = 25000
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + ttoan + ' VND';
+        } else if (ttoan <= 50) {
+            ttoan = 25000 + (600 * ttoan);
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + ttoan + ' VND';
+        } else if (ttoan > 50 && ttoan <= 200) {
+            ttoan = 25000 + (50 * 600) + 400 * (ttoan - 50);
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + ttoan + ' VND';
+        } else if (ttoan > 200) {
+            ttoan = 25000 + (50 * 600) + (150 * 400) + 200 * (ttoan - 200);
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + ttoan + ' VND';
+
+        }
+    }
+</script>
+</body>
+</html>

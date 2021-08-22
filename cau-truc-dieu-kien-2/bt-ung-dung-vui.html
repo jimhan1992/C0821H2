@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+<h1>Do You Love Me ?</h1>
+<button type="button" onclick="alert('😍💓💓💓💓😍')">Yes</button>
+<button onmouseover="chaytron()" id="myNo" style="position:absolute">No</button>
+<script>
+    function chaytron(){
+
+        let y = window.innerHeight * Math.random() ;
+        let x = window.innerHeight * Math.random() ;
+        document.getElementById('myNo').style.left = x + 'px';
+        document.getElementById('myNo').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+<label>Nhập số mét :
+    <input type="number" id="met"></label>
+<button onclick="doi()">Chuyển</button>
+<br>
+<br>
+<div id="result" style="color: red"></div>
+<script>
+    function doi() {
+        let M = +document.getElementById('met').value;
+        let ft = M * 3.2808;
+        document.getElementById('result').innerHTML = M + " met = " + ft + ' feet';
+    }
+
+</script>
+</body>
+</html>

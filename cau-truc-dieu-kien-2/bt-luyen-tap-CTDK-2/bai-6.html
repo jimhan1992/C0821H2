@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<p>Giải Phương trình ax + b = 0</p>
+<label>Nhập số a :
+    <input type="number" id="a"></label>
+<label>Nhập số b :
+    <input type="number" id="b"></label>
+<button onclick="dtic()">Tính</button>
+<br>
+<br>
+<div id="result" style="color: blue"></div>
+<script>
+    function dtic() {
+        let so_a = +document.getElementById('a').value;
+        let so_b = +document.getElementById('b').value;
+        if (so_a == 0) {
+            if (so_b == 0) {
+                document.getElementById('result').innerHTML = 'Đúng với tất cả x (vô số nghiệm)';
+            } else {
+                document.getElementById('result').innerHTML = 'Phương trình bất khả thi (vô nghiệm)';
+            }
+
+        } else {
+            document.getElementById('result').innerHTML = "Một nghiệm duy nhất: x = -b / a = " + -so_b / so_a;
+        }
+
+    }
+
+</script>
+</body>
+</html>

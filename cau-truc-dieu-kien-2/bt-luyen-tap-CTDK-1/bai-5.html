@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+
+</head>
+<body>
+<p id="result"></p>
+<script>
+    giua_ky = +prompt('Nhâp điểm giữa kì');
+    cuoi_ky = +prompt('Nhập điểm cuối kì');
+    tb = (giua_ky + cuoi_ky) / 2;
+    if (tb >= 8 && tb <= 10) {
+        document.getElementById('result').innerHTML = "Giỏi";
+    } else if (tb >= 6.5) {
+        document.getElementById('result').innerHTML = "Khá";
+    } else if (tb >= 5) {
+        document.getElementById('result').innerHTML = "Trung Bình";
+    } else {
+        document.getElementById('result').innerHTML = "Yếu";
+    }
+
+</script>
+</body>
+</html>

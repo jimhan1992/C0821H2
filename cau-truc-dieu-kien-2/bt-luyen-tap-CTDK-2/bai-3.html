@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông khi biết cạnh a</title>
+</head>
+<body>
+<label>Nhập canh a :
+    <input type="number" id="a"></label>
+<button onclick="dtic()">Chuyển</button>
+<br>
+<br>
+<div id="result" style="color: red"></div>
+<script>
+    function dtic() {
+        let A = +document.getElementById('a').value;
+        let S = A * A;
+        document.getElementById('result').innerHTML = 'Diện tích hình vuông bằng: '+ A + '*' + A +' = ' + S;
+    }
+
+</script>
+</body>
+</html>

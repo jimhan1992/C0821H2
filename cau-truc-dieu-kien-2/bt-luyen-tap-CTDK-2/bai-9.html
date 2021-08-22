@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<label>Nhập số a :
+    <input type="number" id="a"></label>
+<label>Nhập số b :
+    <input type="number" id="b"></label>
+<label>Nhập số c :
+    <input type="number" id="c"></label>
+<button onclick="dtic()">Tính</button>
+<br>
+<br>
+<div id="result" style="color: blue"></div>
+<script>
+    function dtic() {
+        let A = +document.getElementById('a').value;
+        let B = +document.getElementById('b').value;
+        let C = +document.getElementById('c').value;
+        if (A > 0 && B > 0 && C > 0) {
+            if (A + B > C && B + C > A && C + A > B) {
+                document.getElementById('result').innerHTML = A +',' + B +',' + C + ' là cạnh của 1 tam giác';
+            }else {
+                document.getElementById('result').innerHTML =  A +',' + B +',' + C + ' Không là cạnh của 1 tam giác';
+            }
+        } else {
+            document.getElementById('result').innerHTML =  A +',' + B +',' + C + ' Không là cạnh của 1 tam giác';
+        }
+    }
+</script>
+</body>
+</html>

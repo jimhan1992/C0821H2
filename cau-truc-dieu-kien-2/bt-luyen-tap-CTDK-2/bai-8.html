@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<label>Nhập số :
+    <input type="number" id="tuoi"></label>
+<button onclick="doi()">Kiểm tra</button>
+<br>
+<br>
+<div id="result" style="color: blue"></div>
+<script>
+    function doi() {
+        let T = +document.getElementById('tuoi').value;
+        if (T > 0 && T < 120) {
+            document.getElementById('result').innerHTML = T + ' Là tuổi của một người';
+        } else {
+            document.getElementById('result').innerHTML = T + ' không là số tuổi của một người';
+        }
+    }
+
+</script>
+</body>
+</html>

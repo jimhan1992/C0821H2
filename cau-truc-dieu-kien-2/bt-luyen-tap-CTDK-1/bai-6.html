@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<p>Từ 0 - 200 nghìn hoa hồng 3%</p>
+<p>Từ 200 - 500 nghìn hoa hồng 5%</p>
+<p>Từ 500 - 1 triệu hoa hồng 10%</p>
+<p>Từ 1 triệu trở lên hoa hồng 15%</p>
+<p style="color: red">Cách tính: (Số tiền * %)/100</p>
+<label><input type="number" id="hoa_hong"></label>
+<button onclick="tinh()">Tính</button>
+<br>
+<br>
+<div id="ket_qua" style="color: blue"></div>
+
+<script>
+    function tinh() {
+        let hh = +document.getElementById('hoa_hong').value;
+        if (hh > 0 && hh <= 200000) {
+            ba = (hh * 3) / 100;
+            document.getElementById('ket_qua').innerHTML = "Hoa hồng là: " + ba + ' VND';
+        } else if (hh >= 200000 && hh < 500000) {
+            nam = (hh * 5) / 100;
+            document.getElementById('ket_qua').innerHTML = "Hoa hồng là: " + nam + ' VND';
+        } else if (hh >= 500000 && hh < 1000000) {
+            muoi = (hh * 10) / 100;
+            document.getElementById('ket_qua').innerHTML = "Hoa hồng là: " + muoi + ' VND';
+        } else if (hh >= 1000000) {
+            muoi_5 = (hh * 15) / 100;
+            document.getElementById('ket_qua').innerHTML = "Hoa hồng là: " + muoi_5 + ' VND';
+        }
+    }
+</script>
+</body>
+</html>

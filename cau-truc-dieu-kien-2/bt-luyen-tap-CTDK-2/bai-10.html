@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện.</title>
+</head>
+<body>
+<p> 100 số đầu tiên môi số phải trả 1000đ</p>
+<p> 101 đến 150 số phải trả 2000đ</p>
+<p> 151 đến 200 số phải trả 2500đ</p>
+<p> 200 số trở lên phải trả 3000đ</p>
+
+<p>Nhập số kw đã đã dùng:</p>
+<label><input type="number" id="nhap"></label>
+<button onclick="kiem_tra()"> Kiểm tra</button>
+<br>
+<br>
+<div id="result" style="color: red"></div>
+
+<script>
+    function kiem_tra() {
+        let kw = document.getElementById('nhap').value;
+        if (kw <= 100) {
+            kw = kw * 1000;
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + kw + ' VND';
+        } else if (kw <= 150) {
+            kw = (kw - 100) * 2000;
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + kw + ' VND';
+        } else if (kw <= 200) {
+            ttoan = (kw - 150) * 2500 + (50 * 2000) + (100 * 1000);
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + kw + ' VND';
+        } else if (kw > 200) {
+            kw = (1000 * 100) + (50 * 2000) + (50 * 2500) + 3000 * (kw - 200);
+            document.getElementById('result').innerHTML = 'Số tiền thanh toán là: ' + kw + ' VND';
+
+        }
+    }
+</script>
+</body>
+</html>

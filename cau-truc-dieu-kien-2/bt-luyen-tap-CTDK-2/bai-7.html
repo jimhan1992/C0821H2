@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Giải phương trình bậc 2</title>
+</head>
+<body>
+<p>Giải phương trình bậc 2: ax² + bx + c = 0</p>
+<label>Nhập số a :
+    <input type="number" id="a"></label>
+<label>Nhập số b :
+    <input type="number" id="b"></label>
+<label>Nhập số c :
+    <input type="number" id="c"></label>
+<button onclick="tinh()">Tính</button>
+<br>
+<br>
+<div id="result" style="color: blue"></div>
+<script>
+    function tinh() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        if (a == 0) {
+            document.getElementById("result").innerHTML ="Khong phai phuong trinh bac 2";
+        } else {
+            let denta = b * b - 4 * a *c;
+            if (denta < 0) {
+                document.getElementById("result").innerHTML ="Phuong trinh vo nghiem";
+            } else {
+                let x1 = (-b + Math.sqrt(denta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(denta)) / (2 * a);
+                document.getElementById("result").innerHTML = "Nghiem x1= " + x1 + " <br>   Nghiem x2= " + x2;
+            }
+        }
+    }
+</script>
+</body>
+</html>

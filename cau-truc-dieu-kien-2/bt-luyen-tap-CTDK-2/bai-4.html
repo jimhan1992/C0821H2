@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</title>
+</head>
+<body>
+<label>Nhập cạnh a :
+    <input type="number" id="a"></label>
+<label>Nhập cạnh b :
+    <input type="number" id="b"></label>
+<button onclick="doi()">Chuyển</button>
+<br>
+<br>
+<div id="result" style="color: red"></div>
+<script>
+    function doi() {
+        let da = +document.getElementById('a').value;
+        let db = +document.getElementById('b').value;
+        let S = da * db;
+
+        document.getElementById('result').innerHTML = 'Diện tích hình chữ nhật là: ' +S;
+
+    }
+
+</script>
+</body>
+</html>
