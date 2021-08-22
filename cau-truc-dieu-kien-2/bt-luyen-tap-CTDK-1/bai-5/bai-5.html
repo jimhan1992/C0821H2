@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="number" id="giua">
+<input type="number" id="cuoi">
+<input type="button" onclick="xeploai()" value="xếp loại">
+<div id="result"></div>
+<script>
+    function xeploai() {
+        let giuaky = +document.getElementById('giua').value;
+        let cuoiky = +document.getElementById('cuoi').value;
+        let tb = (giuaky + cuoiky)/2;
+        if (tb >= 8 && tb <= 10) {
+            document.getElementById('result').innerHTML = "Giỏi";
+        } else if (tb >= 6.5) {
+            document.getElementById('result').innerHTML = "Khá";
+        } else if (tb >= 5) {
+            document.getElementById('result').innerHTML = "Trung Bình";
+        } else {
+            document.getElementById('result').innerHTML = "Yếu";
+        }
+    }
+</script>
+</body>
+</html>
