@@ -5,6 +5,83 @@
     <title>Viết chương trình tính thuế thu nhập cá nhân</title>
 </head>
 <body>
-
+<p>
+    Bậc 1: 4 triệu đồng/tháng 0%; <br>
+    Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;<br>
+    Bậc 3: Trên 6 - 9 triệu đồng: 10%;<br>
+    Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;<br>
+    Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;<br>
+    Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;<br>
+    Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;<br>
+    Bậc 8: Trên 84 triệu đồng: 35%.<br>
+    Số người phụ thuộc * 1,600,000
+</p>
+<p>Lương hàng tháng:</p>
+<label><input type="number" id="luongt"></label> <br>
+<p>Số người phụ thuộc (con nhỏ dưới 18t, nguời già,...):</p>
+<label><input type="number" id="so_nguoi"></label>
+<button onclick="kiem_tra()"> Kiểm tra</button>
+<br>
+<br>
+<div id="result" style="color: red"></div>
+<script>
+    function kiem_tra() {
+        luongT = document.getElementById('luongt').value;
+        phu_thuoc = document.getElementById('so_nguoi').value;
+        pT = phu_thuoc * 1600000;
+        if (luongT<=4000000){
+            document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+        }else if(luongT<=6000000){
+            thue = (6000000-4000000-pT)*5/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT<=9000000){
+            thue = (6000000-4000000)*5/100 +(luongT-6000000-pT)*10/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT<=14000000){
+            thue = (6000000-4000000)*5/100 +(9000000-6000000)*10/100+(luongT-9000000-pT)*15/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT<=24000000){
+            thue = (6000000-4000000)*5/100+(9000000-6000000)*10/100+(14000000-9000000)*15/100+(luongT-14000000-pT)*20/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT<=44000000){
+            thue = (6000000-4000000)*5/100+(9000000-6000000)*10/100+(14000000-9000000)*15/100+(24000000-14000000)*20/100+(luongT-24000000-pT)*25/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT<=84000000){
+            thue = (6000000-4000000)*5/100+(9000000-6000000)*10/100+(14000000-9000000)*15/100+(24000000-14000000)*20/100+(44000000-24000000)*25/100+ (luongT-44000000-pT)*30/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }else if(luongT>84000000){
+            thue = (6000000-4000000)*5/100+(9000000-6000000)*10/100+(14000000-9000000)*15/100+(24000000-14000000)*20/100+(44000000-24000000)*25/100+ (84000000-44000000)*30/100+(luongT-84000000-pT)*35/100;
+            if (thue>=0){
+                document.getElementById('result').innerHTML = "Bạn phải nộp thuế cá nhân là: " + thue;
+            }else{
+                document.getElementById('result').innerHTML = "Bạn không phải nộp thuế";
+            }
+        }
+    }
+</script>
 </body>
 </html>
