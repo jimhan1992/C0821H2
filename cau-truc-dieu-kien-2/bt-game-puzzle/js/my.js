@@ -2,13 +2,13 @@ function changeSrcImage(elementId, number) {
     let imageClick = document.getElementById(elementId);
     let altImage = imageClick.getAttribute('alt')
     if (altImage === 'funny') {
-        document.getElementById(elementId).setAttribute('src', 'image/monkey_part' + number + 'x1.jpg');
+        document.getElementById(elementId).setAttribute('src', 'images/monkey_part' + number + 'x1.jpg');
         document.getElementById(elementId).setAttribute('alt', 'monkey');
     } else if (altImage === 'monkey') {
-        document.getElementById(elementId).setAttribute('src', 'image/panda_swap_part' + number + 'x1.jpg');
+        document.getElementById(elementId).setAttribute('src', 'images/panda_swap_part' + number + 'x1.jpg');
         document.getElementById(elementId).setAttribute('alt', 'panda');
     } else {
-        document.getElementById(elementId).setAttribute('src', 'image/funny-cat1_part' + number + 'x1.jpg');
+        document.getElementById(elementId).setAttribute('src', 'images/funny-cat1_part' + number + 'x1.jpg');
         document.getElementById(elementId).setAttribute('alt', 'funny');
     }
 
@@ -30,5 +30,12 @@ function checkWin() {
         document.getElementById('image-3').style.border = '2px solid red';
         document.getElementById('image-4').style.border = '2px solid red';
         document.getElementById('image-5').style.border = '2px solid red';
+    }else{
+
+        document.getElementById('image-1').style.border = '';
+        document.getElementById('image-2').style.border = '';
+        document.getElementById('image-3').style.border = '';
+        document.getElementById('image-4').style.border = '';
+        document.getElementById('image-5').style.border = '';
     }
 }
