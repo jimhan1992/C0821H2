@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+        numbers = +prompt("Nhập vào số từ 1 -> 20");
+    let a = 0, i = 2, j
+    for (i; i < 73; i++) {
+        let count = 0
+        for (j = 2; j < i; j++) {
+            if (i % j === 0) count++
+        }
+        if (count === 0) {
+            document.write(i+' ')
+            a++
+            if (a === numbers) break
+        }
+    }
+</script>
+</body>
+</html>
