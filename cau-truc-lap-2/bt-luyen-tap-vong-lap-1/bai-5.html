@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = 1;
+    let c;
+    let i = 2;
+    let s = 1;
+    for (; ;) {
+        c = a + b;
+        i++;
+        b = a;
+        a = c;
+        s = s + c
+        if (i === 20) break
+    }
+    document.write(s)
+</script>
+</body>
+</html>

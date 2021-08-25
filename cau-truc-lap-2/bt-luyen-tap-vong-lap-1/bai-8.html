@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play() {
+        let min = +prompt('Bạn muốn đoán trong khoảng từ: ')
+        let max = +prompt('đến')
+        let a = +prompt('Số bạn đoán là:  ')
+        let b = Math.floor(Math.random() * (max - min) + min)
+        for (i = 1; i <3;) {
+            if (a > b) {
+                alert('Lớn hơn mất rồi')
+                a = +prompt('Số bạn đoán là:  ')
+                i++
+            }
+            if (a < b) {
+                alert('Bạn đã chọn một số nhỏ hơn')
+                a = +prompt('Số bạn đoán là:  ')
+                i++
+            }
+            if (a === b) {
+                alert('Chúc mừng bạn, bạn đã chiến thắng')
+                break
+            }
+        }
+    }
+</script>
+</body>
+</html>
