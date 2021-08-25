@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let goc = +prompt('số tiền ban đầu');
+    let thang = +prompt('số tháng cho vay');
+    let laiThang = +prompt('lãi suất hàng tháng');
+    let d = 0;
+    for (let i = 1; i <= thang; i++) {
+        d = goc / 100 * laiThang;
+        goc = goc + d;
+    }
+    document.write(goc);
+</script>
+</body>
+</html>

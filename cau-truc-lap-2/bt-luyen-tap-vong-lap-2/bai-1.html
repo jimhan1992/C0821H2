@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let a = 0
+    let b = 1
+    for (i = 0; i < 25; i++) {
+        let c = a + b;
+        b = a;
+        a = c;
+        if (c % 5 === 0) {
+            document.write(c + ' <br>');
+        }
+    }
+
+</script>
+</body>
+</html>
