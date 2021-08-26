@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+<label><input type="text" id="input"></label>
+<button onclick="tim_kiem()">Tìm kiếm</button>
+<div id="result"></div>
+<script>
+    function tim_kiem() {
+        let inp = document.getElementById('input').value;
+        let ta = ['HELLO', 'DOG', 'WHITE', 'BODY', 'BLUE', 'BLACK'];
+        let tv = ['xin chào', 'con chó', 'trắng', 'thân hình', 'xanh', 'đen'];
+        inp = inp.toUpperCase()
+        for (let i = 0; i < ta.length; i++) {
+            if (inp === ta[i]) {
+                document.getElementById('result').innerHTML = tv[i];
+                break;
+            } else {
+                document.getElementById('result').innerHTML = ('báo không tìm thấy');
+            }
+        }
+    }
+</script>
+</body>
+</html>
