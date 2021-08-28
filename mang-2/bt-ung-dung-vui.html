@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on TypingAssignment</title>
+</head>
+<body>
+<h1>🐄🐄🐄🐄🐄🐄</h1>
+<textarea id="a" cols="50%" rows="10" onkeydown="up()" placeholder="Không viết vào đây 👌"></textarea>
+<script>
+    let arr = 'Bạn là kẻ cố chấp! 😅';
+    let i = 0;
+    let str = '';
+
+    function up() {
+        if (i === arr.length) {
+            i = 0;
+            str = '';
+        }
+        str += arr[i];
+        document.getElementById('a').value = str;
+        i++;
+    }
+</script>
+</body>
+</html>

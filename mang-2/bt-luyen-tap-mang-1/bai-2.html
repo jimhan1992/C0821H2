@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let number = [5, 65, 45, 12, 55, 45, 53, 1, 132, 15];
+    let max = number[0];
+    let index = 0;
+    for (let i = 1; i < number.length; i++) {
+        if (max < number[i]) {
+            max = number[i];
+            index = i;
+        }
+    }
+    document.write("Số lớn nhất: " + max + " Vị trí " + index);
+</script>
+</body>
+</html>

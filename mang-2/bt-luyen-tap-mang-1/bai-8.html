@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+
+<script>
+   let x=0;
+   let arr = Array();
+   for (let i=0;i<10;i++){
+        arr[x]=prompt('nhap')
+       x++;
+   }
+   let first = 0;
+   let last = arr.length - 1;
+   while (first < last) {
+       let b = arr[first];
+       arr[first] = arr[last];
+       arr[last] = b;
+       first++;
+       last--;
+   }
+   document.write(arr);
+</script>
+</body>
+</html>

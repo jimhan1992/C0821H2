@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<!--Viết một chương trình để đếm số từ trong một chuỗi-->
+<script>
+    let inpt1 = prompt('Mời bạn nhập chuỗi: ');
+    let inpt = inpt1.split("");
+    let count = 0;
+    for (let i = 0; i < inpt.length; i++) {
+        if (inpt[0] === ' ') {
+            inpt.shift()
+        } else if (inpt[inpt.length - 1] === ' ') {
+            inpt.pop()
+        } else if (inpt[i] === ' ') {
+            count++
+        }
+    }
+    count++
+    alert('Số từ có trong chuỗi ' + count)
+</script>
+</body>
+</html>

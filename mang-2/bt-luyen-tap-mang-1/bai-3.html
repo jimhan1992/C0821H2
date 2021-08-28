@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let number = [21, 213, 1232, 1311, 3, 13, 13, 13, 11, 1, 315, 13, 21, 13, 5];
+    let max = number[0];
+    let sum = 0;
+    for (let i = 0; i < number.length; i++) {
+        sum = sum + number[i] / number.length;
+        if (max < number[i]) {
+            max = number[i];
+        }
+    }
+    document.write('Tb: ' + sum + '<br>' + 'Max: ' + max);
+</script>
+</body>
+</html>
