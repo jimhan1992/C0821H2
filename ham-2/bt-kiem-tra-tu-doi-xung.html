@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Kiểm tra từ đối xứng</title>
 </head>
 <body>
-$END$
+<script>
+    //cách 1
+    function isPalindrome(arr) {
+        let n = arr.length;
+        let first = 0;
+        let last=n-1;
+        while (first<last){
+            if(arr[first]!==arr[last]){
+                return false;
+            }
+            first++;
+            last--;
+        }
+        return true;
+    }
+    //cách 2
+    // function isPalindrome(arr) {
+    //     let n = arr.length;
+    //     for (let i = 0; i < n / 2; i++) {
+    //         if (arr[i] !== arr[n - 1 - i]) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    let arr = prompt('nhap chuoi')
+    document.write(isPalindrome(arr))
+</script>
 </body>
 </html>

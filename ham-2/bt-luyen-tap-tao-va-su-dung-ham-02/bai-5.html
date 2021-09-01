@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
 </head>
 <body>
-$END$
+<script>
+    function checkMin(num, num1, num2) {
+        let min = num;
+        if (num1 < min) {
+            min = num1;
+        }
+        if (num2 < min) {
+            min = num2;
+        }
+        return min
+    }
+
+    num = prompt('Số thứ 1');
+    num1 = prompt('Số thứ 2');
+    num2 = prompt('Số thứ 3');
+    alert(checkMin(num, num1, num2) + ' là số nhỏ nhất')
+</script>
 </body>
 </html>

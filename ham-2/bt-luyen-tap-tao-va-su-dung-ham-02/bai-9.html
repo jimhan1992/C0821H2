@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('Nhập ký tự');
+    }
+    let n = prompt('Ký tự cần tìm');
+
+    function reverse(arr, n) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === n) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            count--;
+        }
+        return count
+    }
+
+    alert(reverse(arr, n))
+</script>
 </body>
 </html>

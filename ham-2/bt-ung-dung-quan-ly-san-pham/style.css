@@ -1,0 +1,32 @@
+fieldset {
+    background-color: #f1f1f1;
+    width: 400px;
+    height: 35px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+button {
+    height: 35px;
+    background-color: #50ae50;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 800px;
+}
+
+tr {
+    padding: 3px;
+    height: 50px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}

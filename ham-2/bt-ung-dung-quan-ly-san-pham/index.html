@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<h2>Add New Product</h2>
+<fieldset>
+    <label for="newP"></label>
+    <input type="text" id="newP" placeholder="New Product">
+    <button type="button" onclick="addNewProduct()">Add</button>
+</fieldset>
+<h2>Display All Product</h2>
+<table>
+    <tr>
+        <td>Product Name</td>
+        <td style="text-align: right; color: #cc7171" id="total"></td>
+    </tr>
+</table>
+<table>
+    <tbody id="products">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="my.js"></script>
 </body>
 </html>

@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr1 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let star = prompt('Nhập tên 1 ngôi sao');
+
+    function checkStar(star) {
+        for (i = 0; i < arr.length; i++) {
+            if (star === arr[i]) {
+                return arr1[i];
+            }
+        }
+            return "Không tìm thấy";
+    }
+
+    alert(checkStar(star));
+</script>
 </body>
 </html>

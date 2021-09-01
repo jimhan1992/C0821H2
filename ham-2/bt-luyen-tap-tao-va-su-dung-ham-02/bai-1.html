@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
 </head>
 <body>
-$END$
+<label for="number">Tính bình phương 1 số</label><br>
+<input id="number" type="number" oninput="calculate(this.value)" placeholder="Nhập số">
+<br>
+<br>
+<div id="result"></div>
+<script>
+    function square(number) {
+        result = number * number;
+        return result;
+    }
+
+    function calculate() {
+        let input = document.getElementById('number').value;
+        result = square(input)
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
 </body>
 </html>

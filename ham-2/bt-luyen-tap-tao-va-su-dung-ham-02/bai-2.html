@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
 </head>
 <body>
-$END$
+<!--Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+
+<label for="number">Tính diện tích hình tròn</label><br>
+<input id="number" type="number" oninput="calculate(this.value)" placeholder="Nhập bán kính">
+<br>
+<p id="result"></p>
+<br>
+<label for="number1">Tính chu vi hình tròn</label><br>
+<input id="number1" type="number" oninput="calculate1(this.value)" placeholder="Nhập bán kính">
+<br>
+<br>
+<p id="result1"></p>
+<script>
+    function circleArea(area) {
+        result = area * area * 3.14;
+        return result;
+    }
+
+    function calculate() {
+        let input = document.getElementById('number').value;
+        result = circleArea(input)
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function circlePerimeter(perimeter) {
+        result1 = 2 * perimeter * 3.14;
+        return result1;
+    }
+
+    function calculate1() {
+        let input1 = document.getElementById('number1').value;
+        result1 = circlePerimeter(input1)
+        document.getElementById('result1').innerHTML = result1;
+    }
+</script>
 </body>
 </html>

@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
 </head>
 <body>
-$END$
+<script>
+    function changeNumber(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        alert('a = ' + a + ", b = " + b);
+    }
+
+    a = +prompt('Số thứ 1')
+    b = +prompt('Số thứ 2')
+    changeNumber(a, b);
+</script>
 </body>
 </html>

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
 </head>
 <body>
-$END$
+<label for="input">Chuyển đổi từ feet sang meters:</label>
+<br>
+<input type="number" id="input" oninput="footToMeter(this.value)" placeholder="Nhập ở đây">
+<br>
+<br>
+<label for="input1">Chuyển đổi từ meters sang feet:</label>
+<br>
+<input type="number" id="input1" oninput="meterToFoot(this.value)" placeholder="Nhập ở đây">
+
+<br>
+<br>
+<p style="color: blue" id="result"></p>
 </body>
+<script>
+    function footToMeter(foot) {
+        foot = parseFloat(foot)
+        document.getElementById("result").innerHTML = foot + ' feet = ' + (0.305 * foot) + ' meters';
+    }
+
+    function meterToFoot(meter) {
+        meter = parseFloat(meter)
+        document.getElementById("result").innerHTML = meter + ' meters = ' + (3.279 * meter) + ' feet';
+    }
+</script>
 </html>

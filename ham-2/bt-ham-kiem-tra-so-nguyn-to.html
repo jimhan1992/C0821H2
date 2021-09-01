@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
 </head>
 <body>
-$END$
+
+    <label for="input">Kiểm tra có phải số nguyên tố 0.</label>
+    <br>
+    <input id="input" type="number" placeholder="Nhập sô bất kỳ" oninput="isPrime(this.value)">
+    <br>
+<p style="color: blue" id="result"></p>
+<script>
+
+    function isPrime(number) {
+        let check = true;
+        if (number < 2) {
+            check = false;
+        } else if (number == 2) {
+            check = true;
+        } else if (number % 2 === 0) {
+            check = false;
+        } else {
+            for (let i = 3; i < Math.sqrt(number); i += 2) {
+                if (number % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if (check === true) {
+            document.getElementById("result").innerHTML = number + " là số nguyên tố";
+        } else {
+            document.getElementById("result").innerHTML = number + " không phải là số nguyên tố";
+        }
+    }
+</script>
 </body>
 </html>
