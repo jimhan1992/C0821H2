@@ -5,22 +5,22 @@
     <title>Sự kiện bàn phím</title>
 </head>
 <body onload="docReady()">
-<img id="nobita" src="../images/1.png" style="position: absolute;left: 0;top: 0;" height="100" width="80"/>
+<img id="nobita" src="../images/1.png" style="position: absolute;left: 0;top: 0;" height="210" width="188" alt="sd"/>
 <script>
     function upArrowPressed() {
-        element = document.getElementById("nobita");
+        let element = document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) - 5 + 'px';
     }
     function downArrowPressed(){
-        var element =document.getElementById("nobita");
+        let element =document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) + 5 + 'px';
     }
     function leftArrowPressed(){
-        var element =document.getElementById("nobita");
+        let element =document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) - 5 + 'px';
     }
     function rightArrowPressed(){
-        var element =document.getElementById("nobita");
+        let element =document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) + 5 + 'px';
     }
     function moveSelection(evt) {

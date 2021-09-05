@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<label><input type="checkbox" id="good" onchange="play('good')">Good</label>
+<br>
+<label><input type="checkbox" id="fast" onchange="play('fast')">Fast</label>
+<br>
+<label><input type="checkbox" id="cheap" onchange="play('cheap')">Cheap</label>
+<script>
+    function play(elementId) {
+        let good = document.getElementById('good');
+        let fast = document.getElementById('fast');
+        let cheap = document.getElementById('cheap');
+
+        if (elementId === 'good') {
+            if (fast.checked && cheap.checked) {
+                fast.checked = false;
+            }
+        } else if (elementId === 'fast') {
+            if (good.checked && cheap.checked) {
+                cheap.checked = false;
+            }
+        } else {
+            if (good.checked && fast.checked) {
+                good.checked = false;
+            }
+        }
+    }
+</script>
 </body>
 </html>
