@@ -18,7 +18,7 @@
             this.on = true
             if (this.battery === 0) {
                 this.on = false
-                alert('Xạc điện thoại vào bạn hiền')
+                alert('sạc điện thoại vào')
             }
         }
 
@@ -31,16 +31,16 @@
                 this.battery--
                 if (this.battery === 0) {
                     this.on = false
-                    alert('Xạc điện thoại vào bạn hiền')
+                    alert('sạc điện thoại vào')
                 }
-                return 'Your phone is on'
+                return 'Điện thoại của bạn đang bật'
             }
             this.battery--
             if (this.battery === 0) {
                 this.on = false
-                alert('Xạc điện thoại vào bạn hiền')
+                alert('sạc điện thoại vào')
             }
-            return 'Your phone is off'
+            return 'Điện thoại của bạn đang tắt'
         }
 
         charge() {
@@ -49,11 +49,11 @@
 
         writeMessage() {
             if (this.on === true) {
-                this.draft = prompt('Gửi tin nhắn theo cách cảu bạn còn tính tiền thì để tôi: ')
+                this.draft = prompt('Gửi tin nhắn: ')
                 this.battery--
                 if (this.battery === 0) {
                     this.on = false
-                    alert('Xạc điện thoại vào bạn hiền')
+                    alert('sạc điện thoại vào')
                 }
             }
         }
@@ -64,7 +64,7 @@
                 this.battery--
                 if (this.battery === 0) {
                     this.on = false
-                    alert('Xạc điện thoại vào bạn hiền')
+                    alert('sạc điện thoại vào')
                 }
             }
         }
@@ -78,20 +78,20 @@
                 document.write(message)
                 if (this.battery === 0) {
                     this.on = false
-                    alert('Xạc điện thoại vào bạn hiền')
+                    alert('sạc điện thoại vào')
                 }
             }
         }
     }
 
     let arr1 = [], arr2 = [], draft1 = '', draft2 = '', go1 = '', go2 = ''
-    let nokia1280 = new Mobile(20, draft1, arr1, go1)
-    let Iphone13 = new Mobile(22, draft2, arr2, go2)
-    nokia1280.on()
-    nokia1280.writeMessage()
-    nokia1280.sendMessage(Iphone13)
-    Iphone13.on()
-    Iphone13.mailbox('Iphone13')
+    let nokia = new Mobile(20, draft1, arr1, go1)
+    let Iphone = new Mobile(22, draft2, arr2, go2)
+    nokia.on()
+    nokia.writeMessage()
+    nokia.sendMessage(Iphone)
+    Iphone.on()
+    Iphone.mailbox('Iphone')
 </script>
 </body>
 </html>
