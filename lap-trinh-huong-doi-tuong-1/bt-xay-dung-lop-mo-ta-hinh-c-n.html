@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="500" height="300" style="border: 1px solid"></canvas>
+<script>
+
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        setRactangle(width, height) {
+            this.height = height;
+            this.width = width;
+        }
+
+        drawCanvas() {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d")
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.fillRect(10, 10, this.width, this.height);
+            ctx.fill();
+        }
+    }
+
+    let area = new Rectangle(50, 100);
+    area.setRactangle(100, 200)
+    document.write('<br>Area: ' + area.getArea());
+    document.write('<br>Perimeter: ' + area.getPerimeter());
+    area.drawCanvas();
+
+</script>
 </body>
 </html>

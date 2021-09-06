@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
 </head>
 <body>
-$END$
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        getC() {
+            return this.doC
+        }
+
+        getCF() {
+            return 9 / 5 * this.doC + 32;
+        }
+
+        getCK() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let doi = new Temperature(25)
+    document.write(doi.getC() + '℃  = ' + doi.getCF() + '℉')
+    document.write('<br>' + doi.getC() + '℃  = ' + doi.getCK() + 'K')
+</script>
 </body>
 </html>

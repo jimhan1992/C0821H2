@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
 </head>
 <body>
-$END$
+<script>
+    class Mobile {
+        constructor(battery, draft, come, go) {
+            this.battery = battery
+            this.draft = draft
+            this.come = come
+            this.go = go
+        }
+
+        on() {
+            this.on = true
+            if (this.battery === 0) {
+                this.on = false
+                alert('Xạc điện thoại vào bạn hiền')
+            }
+        }
+
+        off() {
+            this.on = false
+        }
+
+        check() {
+            if (this.on) {
+                this.battery--
+                if (this.battery === 0) {
+                    this.on = false
+                    alert('Xạc điện thoại vào bạn hiền')
+                }
+                return 'Your phone is on'
+            }
+            this.battery--
+            if (this.battery === 0) {
+                this.on = false
+                alert('Xạc điện thoại vào bạn hiền')
+            }
+            return 'Your phone is off'
+        }
+
+        charge() {
+            this.battery = 100
+        }
+
+        writeMessage() {
+            if (this.on === true) {
+                this.draft = prompt('Gửi tin nhắn theo cách cảu bạn còn tính tiền thì để tôi: ')
+                this.battery--
+                if (this.battery === 0) {
+                    this.on = false
+                    alert('Xạc điện thoại vào bạn hiền')
+                }
+            }
+        }
+
+        sendMessage(smart) {
+            if (this.on === true) {
+                smart.come.push(this.draft)
+                this.battery--
+                if (this.battery === 0) {
+                    this.on = false
+                    alert('Xạc điện thoại vào bạn hiền')
+                }
+            }
+        }
+
+        mailbox(a) {
+            if (this.on === true) {
+                let message = a + ': ' + '<br>'
+                for (let i = 0; i < this.come.length; i++) {
+                    message = message + "Message " + (i + 1) + ': ' + this.come[i] + '<br>'
+                }
+                document.write(message)
+                if (this.battery === 0) {
+                    this.on = false
+                    alert('Xạc điện thoại vào bạn hiền')
+                }
+            }
+        }
+    }
+
+    let arr1 = [], arr2 = [], draft1 = '', draft2 = '', go1 = '', go2 = ''
+    let nokia1280 = new Mobile(20, draft1, arr1, go1)
+    let Iphone13 = new Mobile(22, draft2, arr2, go2)
+    nokia1280.on()
+    nokia1280.writeMessage()
+    nokia1280.sendMessage(Iphone13)
+    Iphone13.on()
+    Iphone13.mailbox('Iphone13')
+</script>
 </body>
 </html>

@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Xây dựng lớp Hình Tròn</title>
 </head>
 <body>
-$END$
+<script>
+    class Circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+
+        getColor() {
+            return this.color
+        }
+    }
+
+    let circle = new Circle(2, "red");
+    document.write("radius: " + circle.getRadius() + "<br> area: " + circle.getArea() + '<br> color: ' + circle.getColor());
+    let circle1 = new Circle(4, "black");
+    document.write("<br>radius: " + circle1.getRadius() + "<br> area: " + circle1.getArea() + '<br> color: ' + circle1.getColor());
+    let circle2 = new Circle(5, "blue");
+    document.write("<br>radius: " + circle2.getRadius() + "<br> area: " + circle2.getArea() + '<br> color: ' + circle2.getColor());
+</script>
 </body>
 </html>
