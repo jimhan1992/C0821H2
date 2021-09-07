@@ -10,7 +10,7 @@
         constructor(remoteCode) {
             this.tvProgram = 1;
             this.remoteCode = remoteCode;
-            this.volume = 20;
+            this.volume = 10;
             this.isOn = false;
         }
 
@@ -77,15 +77,15 @@
         }
     }
 
-    let sony = new Television(10112);
+    let sony = new Television(2021);
     console.log(sony);
     sony.turn();
     sony.adjustTVProgram(7);
 
 
-    let sonyRemote = new Remote(10112);
+    let sonyRemote = new Remote(2021);
     sonyRemote.turnTVProgram(sony, 3);
-    sonyRemote.turnVolume(sony, 2);
+    sonyRemote.turnVolume(sony, 1);
     sonyRemote.turnOnOff(sony);
 </script>
 </body>
