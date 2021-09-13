@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Quiz] Mảng</title>
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+<table>
+    <tr>
+        <td colspan="3"><h1 style="color:black">Sử dụng dấu phẩy (,) nếu có nhiều kết quả</h1></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3"><img id="img" src="images/1-b.png" alt=""></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label for="input"></label><input id="input" type="text"></td>
+        <td>
+            <button type="submit" onclick="answer.check()">Check</button>
+        </td>
+        <td>
+            <a href="../index.html"><button> Home</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="point" style="color: black">Điểm của bạn:</div>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<audio id="amthanhdung">
+    <source src="../audio/amthanhdung.mp3">
+</audio>
+
+
+<audio id="amthanhsai">
+    <source src="../audio/amthanhsai.mp3">
+</audio>
+
+
+<audio id="yeah">
+    <source src="../audio/yeah.mp3">
+</audio>
+<audio id="myAudio" controls autoplay style="display:none">
+    <source src="../audio/nhacnen.mp3" type="audio/ogg">
+    <source src="../audio/nhacnen.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script src="my.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let matrix = [
+        [1,4,5,8,6,2,3,6],
+        [1,4,5,9,6,2,3,6],
+        [1,4,5,10,6,2,3,6],
+        [1,4,5,11,6,2,3,6],
+
+    ]
+    var total = 0;
+    for (var row = 0; row < matrix.length; row++) {
+        for (var column = 0; column < matrix[row].length; column++) {
+            total += matrix[row][column];
+        }
+
+    }
+    alert(total)
+</script>
+</body>
+</html>

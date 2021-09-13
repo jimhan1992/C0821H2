@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    background: black;
+    background-image: url("https://i.pinimg.com/originals/2c/01/9d/2c019d0dac362416a9eed8d957cbc055.jpg");
+    background-size: 100%
+}
+
+h1 {
+    font-size: 30px;
+    color: orange;
+}
+
+button {
+    border-radius: 10px;
+    font-size: 20px;
+    background: blue;
+    padding-right: 20px;
+}
+
+input {
+    font-size: 15px;
+}
+
+div {
+    font-size: 40px;
+    color: snow;
+}
+
+table,img {
+    height: 350px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#input {
+    height: 25px;
+    width: 400px;
+}
+.btn{
+    text-align: left;
+    width: 600px;
+}
+button:hover {
+    color: red;
+    background-color: white;
+}
+
