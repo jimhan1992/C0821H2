@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nguyen_am(string) {
+        let str = string.toUpperCase()
+        let arr = str.split('')
+        let count = 0       // bien de dem so nguyen am
+        str = str.toLowerCase();
+        for (let i = 0; i < str.length; i++) {
+            if (s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] === 'o' || s[i] === 'u') {
+                count++;
+            } else {
+                return false;
+            }
+        }
+        alert("Chuoi co chua nguyen am ." + count);
+    }
+
+    nguyen_am(arr);
+</script>
+</body>
+</html>
