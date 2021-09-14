@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc nhất</title>
 </head>
 <body>
-$END$
+<script>
+    function equation(a, b) {
+        if (a === 0) {
+            if (b === 0) {
+                alert('vô số nghiệm');
+            } else {
+                alert("vô nghiệm");
+            }
+
+        } else {
+            alert("Một nghiệm duy nhất: " + (-b / a));
+        }
+    }
+
+    equation(5, 8);
+</script>
 </body>
 </html>

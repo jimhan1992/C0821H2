@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bài-3</title>
 </head>
 <body>
 <script>
     function nguyen_am(string) {
         let str = string.toUpperCase()
         let arr = str.split('')
-        let count = 0       // bien de dem so nguyen am
+        let count = 0;
         str = str.toLowerCase();
         for (let i = 0; i < str.length; i++) {
-            if (s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] === 'o' || s[i] === 'u') {
+            if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
                 count++;
-            } else {
-                return false;
             }
         }
-        alert("Chuoi co chua nguyen am ." + count);
+        return count;
     }
 
-    nguyen_am(arr);
+    let string = prompt('Nhập chuỗi:');
+    nguyen_am(string);
 </script>
 </body>
 </html>

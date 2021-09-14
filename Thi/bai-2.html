@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let tim = +prompt('Nhập số cần tìm:')
+
+    function check_arr(tim, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (tim === arr[i]) {
+                return i
+            }
+        }
+    }
+
+    check_arr(value, arr);
+</script>
 </body>
 </html>
